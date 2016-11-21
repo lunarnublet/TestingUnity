@@ -575,7 +575,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755174399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebe0355a2d28547438d178a363caffbe, type: 3}
+  m_Script: {fileID: 11500000, guid: e9944ed0a5b44ce40b4bc63ba59fb538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1780929728}
@@ -654,8 +654,9 @@ GameObject:
   - 23: {fileID: 1780929730}
   - 114: {fileID: 1780929734}
   - 50: {fileID: 1780929729}
-  - 114: {fileID: 1780929731}
+  - 114: {fileID: 1780929736}
   - 114: {fileID: 1780929735}
+  - 114: {fileID: 1780929731}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -672,7 +673,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1780929728}
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 10
+  m_LinearDrag: 20
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -717,10 +718,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1780929728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f71c4f22f91fbbb49acef03736fe29d5, type: 3}
+  m_Script: {fileID: 11500000, guid: bc79ccbd35b2f1040806274152d8ee30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1755174403}
 --- !u!33 &1780929732
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -753,7 +753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d3cf3471ddb7c40bc9b70d1e1fbae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
 --- !u!114 &1780929735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,6 +761,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1780929728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe26434bd611f344a20786fb9289297, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e1b8f6339cc30c4dbac008ad200450a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 1755174403}
+--- !u!114 &1780929736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1780929728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db735b490884f044a8dc79a16b651e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 300
