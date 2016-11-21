@@ -2,19 +2,20 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class PlayerController: MonoBehaviour {
+public class PlayerController: MonoBehaviour
+{
 
     private Rigidbody2D rb2d;
     public float speed;
-    private int collectableCount;
-    public Text countText;
+    public int health;
+    public Text healthText;
     public Text WinText;
     public void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        collectableCount = 0;
+        SetHealthText();
         WinText.text = "";
-        setCountText();
+        SetHealthText();
     }
     public void FixedUpdate()
     {
@@ -26,19 +27,19 @@ public class PlayerController: MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("PickUp"))
+        if (collision.gameObject.CompareTag("HealthPack"))
         {
             collision.gameObject.SetActive(false);
-            ++collectableCount;
-            setCountText();
+            health += HealthPack.healthGain;
+            SetHealthText();
         }
     }
-    private void setCountText()
+    private void SetHealthText()
     {
-        countText.text = "Count: " + collectableCount.ToString();
-        if (collectableCount >= 12)
+        healthText.text = "Health: " + health.ToString();
+        if (health <= 0)
         {
-            WinText.text = "You Win!";
+            WinText.text = "You Lose!";
         }
     }
 }
