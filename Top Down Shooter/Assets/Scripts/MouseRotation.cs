@@ -12,7 +12,7 @@ public class MouseRotation : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         Vector3 mousePosition = Input.mousePosition;
 
