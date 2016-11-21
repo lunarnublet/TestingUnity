@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody2D rb2d;
     public float speed;
