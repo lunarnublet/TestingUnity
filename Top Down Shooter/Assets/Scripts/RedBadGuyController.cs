@@ -7,6 +7,7 @@ public class RedBadGuyController : MonoBehaviour {
     public GameObject target;
     private Rigidbody2D rb2d;
     public int speed;
+    public GameObject deathAnimation;
 
     public void Start()
     {
@@ -15,7 +16,7 @@ public class RedBadGuyController : MonoBehaviour {
 
     void LateUpdate () {
         LookAtPlayer();
-        MoveToPlayer();
+        //MoveToPlayer();
     }
 
     private void MoveToPlayer()
@@ -36,5 +37,10 @@ public class RedBadGuyController : MonoBehaviour {
 
         transform.forward = direction;
         transform.rotation = rotation;
+    }
+
+    public void OnDestroy()
+    {
+        //Instantiate(deathAnimation);
     }
 }

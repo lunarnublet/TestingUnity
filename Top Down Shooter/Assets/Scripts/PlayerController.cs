@@ -50,7 +50,8 @@ public class PlayerController: MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Enemy"))
         {
-            Object.Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
+            //Object.Destroy(collision.gameObject);
             health -= Enemy.damage;
             SetHealthText();
         }
